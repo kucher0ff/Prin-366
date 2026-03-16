@@ -3,7 +3,7 @@
 tasks = []  # Каждая задача: {'description': str, 'completed': bool}
 
 def show_tasks():
-    """Выводит все задачи с номерами и статусом."""
+    """Вывести все задачи с номерами и статусом."""
     if not tasks:
         print("\nСписок задач пуст.")
         return
