@@ -71,7 +71,7 @@ func main() {
 
 func listTasks(todoList *TodoList) {
 	if len(todoList.tasks) == 0 {
-		fmt.Println("📭 Список задач пуст")
+		fmt.Println("📭 Список задач пуст!")
 		return
 	}
 
@@ -91,7 +91,7 @@ func addTask(reader *bufio.Reader, todoList *TodoList) {
 	title = strings.TrimSpace(title)
 
 	if title == "" {
-		fmt.Println("❌ Название задачи не может быть пустым")
+		fmt.Println("❌ Название задачи не может быть пустым!")
 		return
 	}
 
