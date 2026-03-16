@@ -87,17 +87,17 @@ func listTasks(todoList *TodoList) {
 
 func addTask(reader *bufio.Reader, todoList *TodoList) {
 	fmt.Print("Введите название задачи: ")
-	title, _ := reader.ReadString('\n')
-	title = strings.TrimSpace(title)
+	name, _ := reader.ReadString('\n')
+	name = strings.TrimSpace(name)
 
-	if title == "" {
+	if name == "" {
 		fmt.Println("❌ Название задачи не может быть пустым!")
 		return
 	}
 
 	task := Task{
 		ID:        todoList.nextID,
-		Title:     title,
+		Title:     name,
 		Completed: false,
 	}
 	todoList.tasks = append(todoList.tasks, task)
